@@ -31,7 +31,19 @@ const defaultState = fromJS({
 		title:'肮脏的红皮鞋',
 		desc:'1， 我一直记得，晚香爱红色，尤其喜欢穿红皮鞋。 结婚的时候，买过一双大红的婚鞋，细高的跟，尖尖头儿，衬得晚香白皙的脚踝熠熠发光，看得我心动。 ...',
 		imgUrl:'//upload-images.jianshu.io/upload_images/9695270-0b01dc75c62a5d93.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240'
-	}]
+	}],
+	recommandList:[{
+		id:1,
+		imgUrl:'http://cdn2.jianshu.io/assets/web/banner-s-3-7123fd94750759acf7eca05b871e9d17.png'
+	},{
+		id:2,
+		imgUrl:'http://cdn2.jianshu.io/assets/web/banner-s-4-b70da70d679593510ac93a172dfbaeaa.png'
+	},{
+		id:3,
+		imgUrl:'http://cdn2.jianshu.io/assets/web/banner-s-7-1a0222c91694a1f38e610be4bf9669be.png'
+	}
+	]
+
 });
 
 export default (state= defaultState,action) => {
