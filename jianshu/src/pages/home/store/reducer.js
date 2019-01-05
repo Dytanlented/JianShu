@@ -1,53 +1,20 @@
 import{ fromJS } from 'immutable';
 
 const defaultState = fromJS({
-	topicList:[{
-		id:1,
-		title:"社会热点",
-	},{
-		id:2,
-		title:"手绘"
-	},{
-		id:3,
-		title:"区块链"
-	}],
-	articleList: [{
-		id:1,
-		title:'爱上后很难放手的三大星座——巨蟹 双鱼 天蝎',
-		desc:'不得不说，在爱情里最多愁善感、情绪不定、反复无常，最容易钻牛角尖、患得患失、歇斯底里的便是水象星座了。太阳（上升、群星）落在巨蟹、双鱼、天蝎的宝...',
-		imgUrl:'//upload-images.jianshu.io/upload_images/13680692-db9ab890f887bc36?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240'
-	},{
-		id:2,
-		title:'三个真实的灭门案件，一个比一个邪乎',
-		desc:'变态凶手，在没有犯罪前，表面上也和我们普通人没什么两样。然而，一旦他们丧失人性那一面爆发，就会展现出远超正常人类范畴的凶残。今晚和大家聊聊国内《...',
-		imgUrl:'//upload-images.jianshu.io/upload_images/14042830-2f20576eb6ae31cd?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240'
-	},{
-		id:3,
-		title:'李湘下达怒滚令：论副驾驶室的江湖地位',
-		desc:'文作者：小错 图片来自网络 侵删 ｜一 10月8号，著名主持人李湘，在微博上霸气发文：朋友的女朋友也不可以坐我的车，滚蛋！ 李湘这暴脾气，深...',
-		imgUrl:'//upload-images.jianshu.io/upload_images/12398541-39345312ae0e0c41.png?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240'
-	},{
-		id:4,
-		title:'肮脏的红皮鞋',
-		desc:'1， 我一直记得，晚香爱红色，尤其喜欢穿红皮鞋。 结婚的时候，买过一双大红的婚鞋，细高的跟，尖尖头儿，衬得晚香白皙的脚踝熠熠发光，看得我心动。 ...',
-		imgUrl:'//upload-images.jianshu.io/upload_images/9695270-0b01dc75c62a5d93.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240'
-	}],
-	recommandList:[{
-		id:1,
-		imgUrl:'http://cdn2.jianshu.io/assets/web/banner-s-3-7123fd94750759acf7eca05b871e9d17.png'
-	},{
-		id:2,
-		imgUrl:'http://cdn2.jianshu.io/assets/web/banner-s-4-b70da70d679593510ac93a172dfbaeaa.png'
-	},{
-		id:3,
-		imgUrl:'http://cdn2.jianshu.io/assets/web/banner-s-7-1a0222c91694a1f38e610be4bf9669be.png'
-	}
-	]
+	topicList:[],
+	articleList: [],
+	recommandList:[]
 
 });
 
 export default (state= defaultState,action) => {
 	switch(action.type){
+		case 'change_home_data':
+			return state.merge({
+				topicList:fromJS(action.topicList),
+				articleList:fromJS(action.articleList),
+				recommandList:fromJS(action.recommandList)
+			})
 		default:
 			return state;
 	}
