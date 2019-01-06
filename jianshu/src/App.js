@@ -8,17 +8,17 @@ import Detail from './pages/detail';
 class App extends Component {
   render() {
     return (
-    	<Provider store={store}>	
-      		<div>
-	      		<Header />
-	      		<BrowserRouter>
-	      			<div>
-		      			<Route path='/' exact component={Home}></Route>
-		      			<Route path='/detail' exact component={Detail}></Route>
-	      			</div>
-	      		</BrowserRouter>
-      		</div>
-      	</Provider>
+    	<Provider store={store}>	      		
+       <BrowserRouter>
+          <div>
+            <Header />
+      			<div>
+        			<Route path='/' exact component={Home}></Route>
+        			<Route path='/detail' exact component={Detail}></Route>
+      			</div>
+          </div>
+    		</BrowserRouter>
+      </Provider>
     );
   }
 }
